@@ -1,0 +1,11 @@
+{
+    "title": "Sample Article",
+    "summary": "This is a sample article used for testing purposes.",
+    "date": "2024-06-01",
+    "tags": [
+        "sample",
+        "article",
+        "testing"
+    ],
+    "author": "John Doe"
+}
