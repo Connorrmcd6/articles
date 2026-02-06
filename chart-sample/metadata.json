@@ -3,7 +3,8 @@
   "summary": "This is a sample article used for demonstrating how to embed charts in a markdown file.",
   "date": "2026-06-01",
   "tags": [
-    "sample"
+    "sample",
+    "charts"
   ],
   "author": "Connor McDonald"
 }

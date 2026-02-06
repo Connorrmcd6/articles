@@ -23,10 +23,9 @@ You can now embed interactive charts in your markdown articles using special cod
 ```
 ````
 
-````
-
 ## Example 1: Simple Bar Chart
 
+````markdown
 ```chart-bar
 {
   "title": "Monthly Revenue",
@@ -40,10 +39,12 @@ You can now embed interactive charts in your markdown articles using special cod
   "xAxis": "month",
   "yAxis": "revenue"
 }
+```
 ````
 
 ## Example 2: Multi-Series Line Chart
 
+````markdown
 ```chart-line
 {
   "title": "Sales vs Target",
@@ -58,9 +59,11 @@ You can now embed interactive charts in your markdown articles using special cod
   "yAxis": ["sales", "target"]
 }
 ```
+````
 
 ## Example 3: Area Chart
 
+````markdown
 ```chart-area
 {
   "title": "User Growth",
@@ -75,9 +78,11 @@ You can now embed interactive charts in your markdown articles using special cod
   "yAxis": "users"
 }
 ```
+````
 
 ## Example 4: Pie Chart
 
+````markdown
 ```chart-pie
 {
   "title": "Market Share",
@@ -90,9 +95,11 @@ You can now embed interactive charts in your markdown articles using special cod
   ]
 }
 ```
+````
 
 ## Example 5: Multi-Series Bar Chart
 
+````markdown
 ```chart-bar
 {
   "title": "Q1 Performance by Region",
@@ -107,9 +114,11 @@ You can now embed interactive charts in your markdown articles using special cod
   "yAxis": ["sales", "profit"]
 }
 ```
+````
 
 ## Example 6: Minimal Chart (No Title)
 
+````markdown
 ```chart-bar
 {
   "data": [
@@ -121,9 +130,11 @@ You can now embed interactive charts in your markdown articles using special cod
   "yAxis": "value"
 }
 ```
+````
 
 ## Complete Article Example
 
+````markdown
 # Q1 2024 Sales Report
 
 Our Q1 performance exceeded expectations across all regions.
@@ -172,7 +183,7 @@ Our products performed differently across categories:
     { "region": "North America", "sales": 150000 },
     { "region": "Europe", "sales": 180000 },
     { "region": "Asia", "sales": 95000 },
-    { "region": "Other", "sales": 23000 }
+    { "region": "Other", "value": 23000 }
   ],
   "xAxis": "region",
   "yAxis": "sales"
@@ -182,6 +193,7 @@ Our products performed differently across categories:
 ## Conclusion
 
 Our Q1 results show strong growth and position us well for Q2.
+````
 
 ## Data Format Requirements
 
