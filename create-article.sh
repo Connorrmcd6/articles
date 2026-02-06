@@ -46,10 +46,12 @@ EOF
 cat > "$ARTICLE_DIR/metadata.json" << EOF
 {
   "title": "",
-  "author": "",
+  "summary": "",
   "date": "$(date +%Y-%m-%d)",
-  "tags": [],
-  "status": "draft"
+  "tags": [
+    "sample"
+  ],
+  "author": ""
 }
 EOF
 
