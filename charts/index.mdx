@@ -81,9 +81,10 @@ Product A dominates the market share at 40%.
   All charts are fully interactive - hover over data points to see details.
 </Callout>
 
-  <Callout type="warning">
-  Keep your data arrays reasonably sized for optimal performance (recommended: < 100 data points per chart).
-  </Callout>
+<Callout type="warning">
+  Keep your data arrays reasonably sized for optimal performance (recommended:
+  less than 100 data points per chart).
+</Callout>
 
 ## Multiple Y-Axes
 
@@ -102,66 +103,27 @@ You can plot multiple metrics on the same chart by passing an array to the `yAxi
 
 That's it! Simple, clean, and powerful data visualization in MDX.
 
-Available Wrapper Components
+## Component Reference
 
-Here's the API reference for each component:
+All wrapper components accept the following props:
 
-<CustomLineChart />
+**CustomLineChart / CustomBarChart / CustomAreaChart:**
 
-<CustomLineChart
-  title="Chart Title" // Optional
-  description="Description" // Optional
-  data={
-    [
-      /* array */
-    ]
-  } // Required
-  xAxis="fieldName" // Required
-  yAxis="fieldName" // Required (string or array)
-/>
+- `title` (optional): Chart title
+- `description` (optional): Chart description
+- `data` (required): Array of data objects
+- `xAxis` (required): Field name for x-axis
+- `yAxis` (required): Field name(s) for y-axis - string or array of strings
 
-<CustomBarChart />
+**CustomPieChart:**
 
-<CustomBarChart
-  title="Chart Title" // Optional
-  description="Description" // Optional
-  data={
-    [
-      /* array */
-    ]
-  } // Required
-  xAxis="fieldName" // Required
-  yAxis="fieldName" // Required (string or array)
-/>
+- `title` (optional): Chart title
+- `description` (optional): Chart description
+- `data` (required): Array of data objects
+- `nameKey` (required): Field name for category labels
+- `dataKey` (required): Field name for values
 
-<CustomAreaChart />
+**Callout:**
 
-<CustomAreaChart
-  title="Chart Title" // Optional
-  description="Description" // Optional
-  data={
-    [
-      /* array */
-    ]
-  } // Required
-  xAxis="fieldName" // Required
-  yAxis="fieldName" // Required (string or array)
-/>
-
-<CustomPieChart />
-
-<CustomPieChart
-  title="Chart Title" // Optional
-  description="Description" // Optional
-  data={
-    [
-      /* array */
-    ]
-  } // Required
-  nameKey="categoryField" // Required
-  dataKey="valueField" // Required
-/>
-
-<Callout />
-
-<Callout type="info|warning|error|success">Your message here</Callout>
+- `type` (optional): "info", "warning", "error", or "success" (defaults to "info")
+- Content goes between opening and closing tags
