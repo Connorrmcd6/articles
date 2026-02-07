@@ -15,24 +15,26 @@ help:
 		echo "Error: Directory '$$ARTICLE_DIR' already exists"; \
 		exit 1; \
 	fi; \
-	mkdir -p "$$ARTICLE_DIR/assets" "$$ARTICLE_DIR/charts"; \
+	mkdir -p "$$ARTICLE_DIR/assets"; \
 	printf '%s\n' \
 	  '# Article Title' \
 	  '' \
-	  'Write your article content here...' \
+	  'Brief introduction goes here.' \
 	  '' \
 	  '## Section 1' \
 	  '' \
-	  'Content goes here.' \
+	  'Write your content here.' \
 	  '' \
 	  '## Section 2' \
 	  '' \
 	  'More content.' \
 	  '' \
+	  '---' \
+	  '' \
 	  '## Conclusion' \
 	  '' \
 	  'Final thoughts.' \
-	  > "$$ARTICLE_DIR/article.md"; \
+	  > "$$ARTICLE_DIR/index.mdx"; \
 	printf '%s\n' \
 	  '{' \
 	  '  "title": "",' \
@@ -41,15 +43,20 @@ help:
 	  '  "tags": [' \
 	  '    "sample"' \
 	  '  ],' \
-	  '  "author": ""' \
+	  '  "published": false,' \
+	  '  "authors": [' \
+	  '    {' \
+	  '      "name": "",' \
+	  '      "linkedIn": ""' \
+	  '    }' \
+	  '  ]' \
 	  '}' \
 	  > "$$ARTICLE_DIR/metadata.json"; \
 	echo "✓ Created article folder: $$ARTICLE_DIR"; \
-	echo "  - $$ARTICLE_DIR/article.md"; \
+	echo "  - $$ARTICLE_DIR/index.mdx"; \
 	echo "  - $$ARTICLE_DIR/metadata.json"; \
 	echo "  - $$ARTICLE_DIR/assets/"; \
-	echo "  - $$ARTICLE_DIR/charts/"; \
 	echo ""; \
 	echo "Next steps:"; \
 	echo "  1. Edit $$ARTICLE_DIR/metadata.json with article details"; \
-	echo "  2. Write your article in $$ARTICLE_DIR/article.md"
+	echo "  2. Write your article in $$ARTICLE_DIR/index.mdx"

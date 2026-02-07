@@ -1,16 +1,17 @@
 {
-  "title": "My First Blog Post",
-  "summary": "A comprehensive guide to getting started with this portfolio system.",
+  "title": "Reference Guide for writing MDX",
+  "summary": "This guide provides a comprehensive reference for writing MDX (Markdown with JSX) content. It covers the syntax, components, and best practices for creating rich and interactive documentation using MDX.",
   "date": "2026-02-07",
   "tags": [
-    "javascript",
-    "web-development"
+    "demo",
+    "mdx",
+    "reference"
   ],
   "published": true,
   "authors": [
     {
-      "name": "Your Name",
-      "linkedIn": "https://www.linkedin.com/in/your-profile/"
+      "name": "Connor McDonald",
+      "linkedIn": "https://www.linkedin.com/in/connor-mcdonald-a770131a1/"
     }
   ]
 }

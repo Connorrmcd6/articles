@@ -1,17 +1,17 @@
 # Articles & Research Repository
 
-A centralized repository for storing articles, research notes, and written content. Each article is organized in its own folder with markdown content and metadata.
+A centralized repository for storing articles, research notes, and written content. Each article is organized in its own folder with MDX content and metadata.
 
 ## Repository Structure
 
 ```
 articles/
-├── create-article.sh          # Script to create new article folders
 ├── Makefile                   # Make targets for creating articles
 ├── README.md                  # This file
 └── sample-article/            # Example article structure
-    ├── article.md             # Article content in markdown
-    └── metadata.json          # Article metadata
+    ├── index.mdx              # Article content in MDX
+    ├── metadata.json          # Article metadata
+    └── assets/                # Images and other assets
 ```
 
 ## Creating a New Article
@@ -25,33 +25,31 @@ make my-article-name
 This will create:
 
 - A new folder with the specified name
-- `article.md` - A markdown file with a basic template
-- `metadata.json` - Metadata file with fields for title, author, date, tags, and status
+- `index.mdx` - An MDX file with a basic template
+- `metadata.json` - Metadata file with title, summary, date, tags, published flag, and authors
 - `assets/` - Images and other assets
-- `charts/` - Chart data files or exports
 
 ### Example
 
 ```bash
-./create-article.sh the-future-of-ai
+make the-future-of-ai
 ```
 
 Creates:
 
 ```
 the-future-of-ai/
-├── article.md
-└── metadata.json
-├── assets/
-└── charts/
+├── index.mdx
+├── metadata.json
+└── assets/
 ```
 
 ## Writing Articles
 
-1. **Create the article folder** using the script
-2. **Edit metadata.json** - Fill in title, author, tags, and other details
-3. **Write your content** in `article.md` using standard markdown
-4. **Update metadata** in metadata.json as you progress
+1. **Create the article folder** using the Makefile
+2. **Edit metadata.json** - Fill in title, summary, authors, and tags
+3. **Write your content** in `index.mdx` using MDX
+4. **Update metadata** as you progress
 
 ## Metadata Format
 
@@ -63,14 +61,20 @@ The `metadata.json` file supports the following fields:
   "summary": "Short summary of the article",
   "date": "2026-02-06",
   "tags": ["tag1", "tag2"],
-  "author": "Your Name"
+  "published": false,
+  "authors": [
+    {
+      "name": "Your Name",
+      "linkedIn": "https://www.linkedin.com/in/your-profile/"
+    }
+  ]
 }
 ```
 
 ## Tips
 
 - Use descriptive folder names (lowercase, hyphens for spaces)
-- Keep article.md focused on content; use metadata.json for organizational info
+- Keep index.mdx focused on content; use metadata.json for organizational info
 - Add tags to make articles easier to find later
 - Consider adding consistent tags for easier filtering
 
