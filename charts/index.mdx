@@ -7,6 +7,7 @@ Below are a few basic charts rendered with custom wrapper components that use Re
 <CustomLineChart
   title="Monthly Financial Performance"
   description="Revenue and expenses comparison for Q1 2024"
+  colors={["hsl(var(--chart-1))", "hsl(var(--chart-2))"]}
   data={[
     { month: "Jan", revenue: 12000, expenses: 8000 },
     { month: "Feb", revenue: 15000, expenses: 9000 },
@@ -24,6 +25,7 @@ You can see the revenue trend is growing steadily while expenses remain relative
 <CustomBarChart
   title="Sales by Region"
   description="Total sales across different regions"
+  colors={["hsl(var(--chart-3))"]}
   data={[
     { region: "North", sales: 25000 },
     { region: "South", sales: 18000 },
@@ -41,6 +43,7 @@ The East region shows the strongest performance with 30,000 in sales.
 <CustomAreaChart
   title="Cumulative Growth"
   description="Revenue growth visualization"
+  colors={["hsl(var(--chart-1))", "hsl(var(--chart-4))"]}
   data={[
     { quarter: "Q1", revenue: 50000, profit: 12000 },
     { quarter: "Q2", revenue: 75000, profit: 20000 },
@@ -58,6 +61,12 @@ Area charts are great for showing cumulative trends and growth patterns.
 <CustomPieChart
   title="Product Market Share"
   description="Distribution of sales by product category"
+  colors={[
+    "hsl(var(--chart-1))",
+    "hsl(var(--chart-2))",
+    "hsl(var(--chart-3))",
+    "hsl(var(--chart-4))",
+  ]}
   data={[
     { name: "Product A", value: 400 },
     { name: "Product B", value: 300 },
@@ -92,6 +101,7 @@ You can plot multiple metrics on the same chart by passing an array to the `yAxi
 
 <CustomBarChart
   title="Multi-Metric Comparison"
+  colors={["hsl(var(--chart-1))", "hsl(var(--chart-2))", "hsl(var(--chart-5))"]}
   data={[
     { category: "A", metric1: 100, metric2: 200, metric3: 150 },
     { category: "B", metric1: 150, metric2: 180, metric3: 220 },
