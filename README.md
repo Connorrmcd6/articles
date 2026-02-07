@@ -7,6 +7,7 @@ A centralized repository for storing articles, research notes, and written conte
 ```
 articles/
 ├── create-article.sh          # Script to create new article folders
+├── Makefile                   # Make targets for creating articles
 ├── README.md                  # This file
 └── sample-article/            # Example article structure
     ├── article.md             # Article content in markdown
@@ -15,10 +16,10 @@ articles/
 
 ## Creating a New Article
 
-Use the provided shell script to create a new article folder:
+Use the Makefile to create a new article folder:
 
 ```bash
-./create-article.sh my-article-name
+make my-article-name
 ```
 
 This will create:
@@ -26,6 +27,8 @@ This will create:
 - A new folder with the specified name
 - `article.md` - A markdown file with a basic template
 - `metadata.json` - Metadata file with fields for title, author, date, tags, and status
+- `assets/` - Images and other assets
+- `charts/` - Chart data files or exports
 
 ### Example
 
@@ -39,6 +42,8 @@ Creates:
 the-future-of-ai/
 ├── article.md
 └── metadata.json
+├── assets/
+└── charts/
 ```
 
 ## Writing Articles
@@ -46,7 +51,7 @@ the-future-of-ai/
 1. **Create the article folder** using the script
 2. **Edit metadata.json** - Fill in title, author, tags, and other details
 3. **Write your content** in `article.md` using standard markdown
-4. **Update status** in metadata.json as you progress (draft → review → published)
+4. **Update metadata** in metadata.json as you progress
 
 ## Metadata Format
 
@@ -55,10 +60,10 @@ The `metadata.json` file supports the following fields:
 ```json
 {
   "title": "Article Title",
-  "author": "Your Name",
+  "summary": "Short summary of the article",
   "date": "2026-02-06",
   "tags": ["tag1", "tag2"],
-  "status": "draft"
+  "author": "Your Name"
 }
 ```
 
@@ -67,7 +72,7 @@ The `metadata.json` file supports the following fields:
 - Use descriptive folder names (lowercase, hyphens for spaces)
 - Keep article.md focused on content; use metadata.json for organizational info
 - Add tags to make articles easier to find later
-- Consider using status values: `draft`, `review`, `published`, `archived`
+- Consider adding consistent tags for easier filtering
 
 ## License
 

@@ -4,12 +4,10 @@ You can now embed interactive charts in your markdown articles using special cod
 
 ## Example 1: Simple Bar Chart
 
-```chart
-@include figures/bar.json
+```
+@include charts/bar.json
 ```
 
 ## Example 2: Multi-Series Line Chart
 
-```chart
-@include figures/line.json
-```
+@include charts/line.json
