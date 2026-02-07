@@ -27,36 +27,14 @@ You can now embed interactive charts in your markdown articles using special cod
 
 ## Example 1: Simple Bar Chart
 
-```chart-bar
-{
-  "title": "Monthly Revenue",
-  "description": "Revenue by month in 2024",
-  "data": [
-    { "month": "Jan", "revenue": 12000 },
-    { "month": "Feb", "revenue": 15000 },
-    { "month": "Mar", "revenue": 18000 },
-    { "month": "Apr", "revenue": 16000 }
-  ],
-  "xAxis": "month",
-  "yAxis": "revenue"
-}
+```chart
+@include figures/bar.json
 ````
 
 ## Example 2: Multi-Series Line Chart
 
-```chart-line
-{
-  "title": "Sales vs Target",
-  "description": "Comparing actual sales to targets",
-  "data": [
-    { "month": "Jan", "sales": 4000, "target": 3500 },
-    { "month": "Feb", "sales": 3000, "target": 4000 },
-    { "month": "Mar", "sales": 5000, "target": 4500 },
-    { "month": "Apr", "sales": 4500, "target": 4000 }
-  ],
-  "xAxis": "month",
-  "yAxis": ["sales", "target"]
-}
+```chart
+@include figures/line.json
 ```
 
 ## Example 3: Area Chart
